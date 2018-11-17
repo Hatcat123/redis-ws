@@ -31,7 +31,7 @@ def get_len():
 
 def get_all_data():
     datalist = []
-    for i in map(lambda x: eval(x), connect.lrange('CONNECT_POOL', 0, -1)):
+    for i in map(lambda x: eval(x), connect.lrange(config.REIDS_DB3_ROW, 0, -1)):
         datalist.append(i)
     return datalist
 
